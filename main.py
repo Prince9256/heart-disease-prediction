@@ -11,7 +11,20 @@ app = Flask(__name__)
 # For simplicity, we'll assume the model is already trained and serialized
 
 # Sample training data logic (replace with actual saved model)
-model = joblib.load('c:/Deepak_Chauhan/Machine Learning/heart-disease-prediction/heart_disease_model.pkl')
+#model = joblib.load('c:/Deepak_Chauhan/Machine Learning/heart-disease-prediction/heart_disease_model.pkl')
+import os
+import pandas as pd
+
+# Get the current script directory
+script_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Create the path to the dataset
+file_path = os.path.join(script_dir, 'data.csv')
+
+# Load the dataset
+data = pd.read_csv(file_path)
+
+print(data.head())
 
 
 @app.route('/')
