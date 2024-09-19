@@ -27,7 +27,7 @@ X_test_prediction = model.predict(X_test)
 test_data_accuracy = accuracy_score(X_test_prediction, Y_test)
 
 # web app
-st.title('Heart Disease Preidction Model')
+st.title('Heart Disease')
 
 input_text = st.text_input('Provide comma separated features to predict heart disease')
 sprted_input = input_text.split(',')
